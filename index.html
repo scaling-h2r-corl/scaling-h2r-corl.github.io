@@ -302,6 +302,7 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:920px){
     .facts{grid-template-columns:repeat(2,1fr);}
+    .facts .fact:nth-child(3){grid-column:1 / -1;}
     .audience{grid-template-columns:repeat(2,1fr);}
     .ch-grid{grid-template-columns:1fr;}
     .spk-grid{grid-template-columns:repeat(2,1fr);}
@@ -312,6 +313,7 @@
   }
   @media (max-width:680px){
     section{padding:60px 0;}
+    .facts{grid-template-columns:1fr;}
     .nav-links{
       display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
       flex-direction:column;padding:12px;gap:2px;box-shadow:var(--shadow-lg);
@@ -361,7 +363,7 @@
   <div class="facts">
     <div class="fact"><div class="k">Venue</div><div class="v">CoRL 2026<small>Austin, Texas</small></div></div>
     <div class="fact"><div class="k">Date</div><div class="v">Nov 9, 2026<small>Half-day session</small></div></div>
-    <div class="fact"><div class="k">Submissions</div><div class="v">8 or 4 pages</div></div>
+    <div class="fact"><div class="k">Submissions</div><div class="v">8 or 4 pages<small>Long &amp; short papers</small></div></div>
   </div>
 </div>
 
