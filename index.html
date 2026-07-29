@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Scaling H2R — Scaling Laws and Diversity in Human-to-Robot · CoRL 2026 Workshop</title>
-<meta name="description" content="Scaling H2R: a CoRL 2026 workshop on scaling laws and diversity in learning robot skills from human data. Austin, TX · November 9, 2026." />
+<meta name="description" content="Scaling H2R: a CoRL 2026 workshop on scaling laws and diversity in learning robot skills from human data. Austin, TX · November 12, 2026." />
 <meta property="og:title" content="Scaling H2R — CoRL 2026 Workshop" />
-<meta property="og:description" content="Scaling Laws and Diversity in Human-to-Robot. CoRL 2026, Austin, TX · November 9, 2026." />
+<meta property="og:description" content="Scaling Laws and Diversity in Human-to-Robot. CoRL 2026, Austin, TX · November 12, 2026." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -147,13 +147,16 @@
 
   /* ---------- FACTS STRIP ---------- */
   .facts{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
     border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:-44px;position:relative;z-index:5;box-shadow:var(--shadow-lg);
   }
   .fact{background:#fff;padding:22px 22px;}
   .fact .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin-bottom:6px;}
   .fact .v{font-family:"Space Grotesk";font-weight:700;font-size:1.18rem;color:var(--ink);}
   .fact .v small{display:block;font-weight:500;font-size:.86rem;color:var(--muted);font-family:"Inter";margin-top:2px;}
+  .fact-hot{background:#fef2f2;box-shadow:inset 3px 0 0 #dc2626;}
+  .fact-hot .k,.fact-hot .v{color:#dc2626;}
+  .fact-hot .v small{color:#ef4444;}
 
   /* ---------- ABOUT ---------- */
   .about p{font-size:1.08rem;color:var(--ink-soft);max-width:850px;}
@@ -302,7 +305,6 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:920px){
     .facts{grid-template-columns:repeat(2,1fr);}
-    .facts .fact:nth-child(3){grid-column:1 / -1;}
     .audience{grid-template-columns:repeat(2,1fr);}
     .ch-grid{grid-template-columns:1fr;}
     .spk-grid{grid-template-columns:repeat(2,1fr);}
@@ -335,7 +337,7 @@
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#challenges">Challenges</a>
+      <a href="#challenges">Research Questions</a>
       <a href="#speakers">Speakers</a>
       <a href="#schedule">Schedule</a>
       <a href="#cfp">Call for Papers</a>
@@ -362,8 +364,9 @@
 <div class="wrap">
   <div class="facts">
     <div class="fact"><div class="k">Venue</div><div class="v">CoRL 2026<small>Austin, Texas</small></div></div>
-    <div class="fact"><div class="k">Date</div><div class="v">Nov 9, 2026<small>Half-day session</small></div></div>
+    <div class="fact"><div class="k">Date</div><div class="v">Nov 12, 2026<small>Half-day session</small></div></div>
     <div class="fact"><div class="k">Submissions</div><div class="v">8 or 4 pages<small>Long &amp; short papers</small></div></div>
+    <div class="fact fact-hot"><div class="k">Submission deadline</div><div class="v">Oct 7, 2026<small>AoE</small></div></div>
   </div>
 </div>
 
@@ -587,10 +590,10 @@
         <h3>Important dates</h3>
         <ul class="dates">
           <li><span class="lbl">Submission portal opens</span><span class="dt">Aug 3, 2026</span></li>
-          <li class="hot"><span class="lbl">Submission deadline</span><span class="dt">Sep 30, 2026 (AoE)</span></li>
+          <li class="hot"><span class="lbl">Submission deadline</span><span class="dt">Oct 7, 2026 (AoE)</span></li>
           <li><span class="lbl">Author notification</span><span class="dt">Oct 12, 2026</span></li>
           <li><span class="lbl">Camera-ready deadline</span><span class="dt">Oct 30, 2026</span></li>
-          <li><span class="lbl">Workshop date</span><span class="dt">Nov 9, 2026</span></li>
+          <li><span class="lbl">Workshop date</span><span class="dt">Nov 12, 2026</span></li>
         </ul>
       </div>
     </div>
