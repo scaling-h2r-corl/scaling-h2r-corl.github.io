@@ -282,6 +282,14 @@
   .div h4{margin:10px 0 6px;font-size:1.02rem;color:var(--ink);}
   .div p{margin:0;font-size:.88rem;color:var(--muted);}
 
+  /* ---------- SPONSORS ---------- */
+  .sponsors{background:var(--surface);}
+  .spons-grid{display:flex;flex-wrap:wrap;align-items:center;gap:48px;margin-top:36px;}
+  .spons-logo{display:flex;align-items:center;gap:12px;filter:grayscale(1);opacity:.75;transition:filter .15s ease,opacity .15s ease;}
+  .spons-logo:hover{filter:none;opacity:1;text-decoration:none;}
+  .spons-logo img{height:40px;width:auto;display:block;}
+  .spons-logo span{font-family:"Space Grotesk";font-weight:700;font-size:1.1rem;color:var(--ink);}
+
   /* ---------- FOOTER ---------- */
   footer{background:var(--ink);color:#aab1d6;padding:56px 0 40px;}
   .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;}
@@ -370,6 +378,53 @@
     <div class="fact fact-hot"><div class="k">Submission deadline</div><div class="v">Oct 7, 2026<small>AoE · No CoRL 2026 main-track papers</small></div></div>
   </div>
 </div>
+
+<!-- CFP -->
+<section id="cfp">
+  <div class="wrap">
+    <p class="eyebrow">Call for Papers</p>
+    <h2 class="section-title">Contribute your work</h2>
+    <p class="section-lead">
+      We solicit contributed papers through a single Regular Papers Track. We invite new,
+      preliminary, and in-progress research as well as position papers on scaling and diversifying
+      human data for robot learning.
+    </p>
+
+    <div class="cfp-grid">
+      <div class="cfp-card">
+        <h3>Submission details</h3>
+        <p>All submissions must be a single PDF using the CoRL 2026 template, submitted through OpenReview.</p>
+        <ul class="tracklist">
+          <li><span class="ck">✓</span> <span><strong>Long papers:</strong> up to 8 pages</span></li>
+          <li><span class="ck">✓</span> <span><strong>Short papers:</strong> up to 4 pages</span></li>
+          <li><span class="ck">✓</span> <span>References &amp; supplementary material do not count toward limits</span></li>
+          <li><span class="ck">✓</span> <span><strong>Non-archival:</strong> concurrent submissions welcome</span></li>
+          <li><span class="ck">✓</span> <span><strong>All papers must be anonymized</strong> for double-blind review</span></li>
+          <li><span class="ck">✗</span> <span><strong>Papers already accepted at the CoRL 2026 main conference are not eligible for submission.</strong></span></li>
+        </ul>
+        <a class="btn btn-primary" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Scaling_H2R" target="_blank" rel="noopener">Submit on OpenReview&nbsp;→</a>
+      </div>
+      <div class="cfp-card">
+        <h3>Important dates</h3>
+        <ul class="dates">
+          <li><span class="lbl">Submission portal opens</span><span class="dt">Aug 3, 2026</span></li>
+          <li class="hot"><span class="lbl">Submission deadline</span><span class="dt">Oct 7, 2026 (AoE)</span></li>
+          <li><span class="lbl">Author notification</span><span class="dt">Oct 19, 2026</span></li>
+          <li><span class="lbl">Camera-ready deadline</span><span class="dt">Oct 30, 2026</span></li>
+          <li><span class="lbl">Workshop date</span><span class="dt">Nov 12, 2026</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="notes-row">
+      <div class="note" style="grid-column:1 / -1;box-shadow:inset 3px 0 0 var(--green);">
+        <h4>🏆 Best Paper Award</h4>
+        <p>The top contributed paper will receive the Best Paper Award, sponsored by NVIDIA.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about" class="about">
@@ -565,45 +620,6 @@
   </div>
 </section>
 
-<!-- CFP -->
-<section id="cfp">
-  <div class="wrap">
-    <p class="eyebrow">Call for Papers</p>
-    <h2 class="section-title">Contribute your work</h2>
-    <p class="section-lead">
-      We solicit contributed papers through a single Regular Papers Track. We invite new,
-      preliminary, and in-progress research as well as position papers on scaling and diversifying
-      human data for robot learning.
-    </p>
-
-    <div class="cfp-grid">
-      <div class="cfp-card">
-        <h3>Submission details</h3>
-        <p>All submissions must be a single PDF using the CoRL 2026 template, submitted through OpenReview.</p>
-        <ul class="tracklist">
-          <li><span class="ck">✓</span> <span><strong>Long papers:</strong> up to 8 pages</span></li>
-          <li><span class="ck">✓</span> <span><strong>Short papers:</strong> up to 4 pages</span></li>
-          <li><span class="ck">✓</span> <span>References &amp; supplementary material do not count toward limits</span></li>
-          <li><span class="ck">✓</span> <span><strong>Non-archival:</strong> concurrent submissions welcome</span></li>
-          <li><span class="ck">✗</span> <span><strong>Papers already accepted at the CoRL 2026 main conference are not eligible for submission.</strong></span></li>
-        </ul>
-        <a class="btn btn-primary" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Scaling_H2R" target="_blank" rel="noopener">Submit on OpenReview&nbsp;→</a>
-      </div>
-      <div class="cfp-card">
-        <h3>Important dates</h3>
-        <ul class="dates">
-          <li><span class="lbl">Submission portal opens</span><span class="dt">Aug 3, 2026</span></li>
-          <li class="hot"><span class="lbl">Submission deadline</span><span class="dt">Oct 7, 2026 (AoE)</span></li>
-          <li><span class="lbl">Author notification</span><span class="dt">Oct 19, 2026</span></li>
-          <li><span class="lbl">Camera-ready deadline</span><span class="dt">Oct 30, 2026</span></li>
-          <li><span class="lbl">Workshop date</span><span class="dt">Nov 12, 2026</span></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- ORGANIZERS -->
 <section id="organizers" class="organizers">
   <div class="wrap">
@@ -675,6 +691,23 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors" class="sponsors">
+  <div class="wrap">
+    <p class="eyebrow">Sponsors</p>
+    <h2 class="section-title">Sponsors</h2>
+    <div class="spons-grid">
+      <a class="spons-logo" href="https://www.nvidia.com/" target="_blank" rel="noopener">
+        <img src="images/nvidia-logo.svg" alt="NVIDIA" loading="lazy" />
+      </a>
+      <a class="spons-logo" href="https://tangiblerobots.ai/" target="_blank" rel="noopener">
+        <img src="images/tangible-robotics-logo.png" alt="Tangible Robotics" loading="lazy" />
+        <span>Tangible Robotics</span>
+      </a>
     </div>
   </div>
 </section>
