@@ -87,10 +87,6 @@
     color:var(--ink-soft);font-weight:500;font-size:.93rem;padding:8px 12px;border-radius:9px;
   }
   .nav-links a:hover{background:var(--surface-2);text-decoration:none;color:var(--ink);}
-  .nav-cta{
-    background:var(--ink);color:#fff !important;padding:9px 16px;border-radius:10px;font-weight:600;
-  }
-  .nav-cta:hover{background:var(--brand);}
   .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:1.1rem;cursor:pointer;}
 
   /* ---------- HERO ---------- */
@@ -239,24 +235,13 @@
   .ev.major .what{font-weight:600;color:var(--ink);}
   .ev .sub{display:block;color:var(--muted);font-size:.86rem;font-weight:400;}
 
-  /* ---------- CFP ---------- */
-  .cfp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;margin-top:36px;align-items:start;}
-  .cfp-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);}
-  .cfp-card h3{margin-top:0;font-size:1.2rem;}
-  .cfp-card p{color:var(--muted);font-size:.97rem;}
-  .tracklist{list-style:none;padding:0;margin:16px 0 0;}
-  .tracklist li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.96rem;}
-  .tracklist li:first-child{border-top:none;}
-  .tracklist .ck{color:var(--green);font-weight:700;}
-  .dates{list-style:none;padding:0;margin:0;}
-  .dates li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px dashed var(--line);}
-  .dates li:last-child{border-bottom:none;}
-  .dates .lbl{color:var(--ink-soft);font-size:.96rem;}
-  .dates .dt{font-family:"Space Grotesk";font-weight:600;color:var(--brand-ink);font-size:.92rem;white-space:nowrap;}
-  .dates li.hot .lbl{font-weight:600;color:var(--ink);}
-  .dates li.hot .dt{color:#fff;background:var(--human);padding:3px 10px;border-radius:8px;}
-  .notes-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-  .note{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;}
+  /* ---------- PAPERS ---------- */
+  .papers h3{font-size:1.2rem;margin:36px 0 4px;}
+  .paper-list{list-style:none;padding:0;margin:0;}
+  .paper-list li{padding:14px 0;border-bottom:1px solid var(--line);}
+  .paper-list .pt{display:block;font-weight:600;color:var(--ink);}
+  .paper-list .pa{display:block;color:var(--muted);font-size:.9rem;margin-top:2px;}
+  .note{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:24px;box-shadow:inset 3px 0 0 var(--green);}
   .note h4{margin:0 0 6px;font-size:.98rem;color:var(--ink);}
   .note p{margin:0;font-size:.88rem;color:var(--muted);}
 
@@ -318,10 +303,8 @@
     .audience{grid-template-columns:repeat(2,1fr);}
     .ch-grid{grid-template-columns:1fr;}
     .spk-grid{grid-template-columns:repeat(2,1fr);}
-    .cfp-grid{grid-template-columns:1fr;}
     .org-grid{grid-template-columns:repeat(2,1fr);}
     .div-grid{grid-template-columns:repeat(2,1fr);}
-    .notes-row{grid-template-columns:1fr;}
   }
   @media (max-width:680px){
     section{padding:60px 0;}
@@ -350,9 +333,8 @@
       <a href="#challenges">Research Questions</a>
       <a href="#speakers">Speakers</a>
       <a href="#schedule">Schedule</a>
-      <a href="#cfp">Call for Papers</a>
+      <a href="#papers">Accepted Papers</a>
       <a href="#organizers">Organizers</a>
-      <a class="nav-cta" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Scaling_H2R" target="_blank" rel="noopener">Submit&nbsp;→</a>
     </nav>
   </div>
 </header>
@@ -364,9 +346,8 @@
     <h1>Scaling <span class="grad">H2R</span> @ CoRL2026</h1>
     <p class="tagline">Scaling Laws and Diversity in Human-to-Robot</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#cfp">📄 Call for Papers</a>
+      <a class="btn btn-primary" href="#papers">📄 Accepted Papers</a>
       <a class="btn btn-ghost" href="#speakers">🎤 Invited Speakers</a>
-      <a class="btn btn-ghost" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Scaling_H2R" target="_blank" rel="noopener">📝 Submit Paper</a>
     </div>
   </div>
 </section>
@@ -380,53 +361,6 @@
     <div class="fact fact-hot"><div class="k">Submission deadline</div><div class="v">Oct 14, 2026<small>AoE · No CoRL 2026 main-track papers</small></div></div>
   </div>
 </div>
-
-<!-- CFP -->
-<section id="cfp">
-  <div class="wrap">
-    <p class="eyebrow">Call for Papers</p>
-    <h2 class="section-title">Contribute your work</h2>
-    <p class="section-lead">
-      We solicit contributed papers through a single Regular Papers Track. We invite new,
-      preliminary, and in-progress research as well as position papers on scaling and diversifying
-      human data for robot learning.
-    </p>
-
-    <div class="cfp-grid">
-      <div class="cfp-card">
-        <h3>Submission details</h3>
-        <p>All submissions must be a single PDF using the CoRL 2026 template, submitted through OpenReview.</p>
-        <ul class="tracklist">
-          <li><span class="ck">✓</span> <span><strong>Long papers:</strong> up to 8 pages</span></li>
-          <li><span class="ck">✓</span> <span><strong>Short papers:</strong> up to 4 pages</span></li>
-          <li><span class="ck">✓</span> <span>References &amp; supplementary material do not count toward limits</span></li>
-          <li><span class="ck">✓</span> <span><strong>Non-archival:</strong> concurrent submissions welcome</span></li>
-          <li><span class="ck">✓</span> <span><strong>All papers must be anonymized</strong> for double-blind review</span></li>
-          <li><span class="ck">✗</span> <span><strong>Papers already accepted at the CoRL 2026 main conference are not eligible for submission.</strong></span></li>
-        </ul>
-        <a class="btn btn-primary" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Scaling_H2R" target="_blank" rel="noopener">Submit on OpenReview&nbsp;→</a>
-      </div>
-      <div class="cfp-card">
-        <h3>Important dates</h3>
-        <ul class="dates">
-          <li><span class="lbl">Submission portal opens</span><span class="dt">Aug 3, 2026</span></li>
-          <li class="hot"><span class="lbl">Submission deadline</span><span class="dt">Oct 14, 2026 (AoE) <small>(extended from Oct 7)</small></span></li>
-          <li><span class="lbl">Author notification</span><span class="dt">Oct 28, 2026 (AoE) <small>(delayed from Oct 19)</small></span></li>
-          <li><span class="lbl">Camera-ready deadline</span><span class="dt">Oct 30, 2026</span></li>
-          <li><span class="lbl">Workshop date</span><span class="dt">Nov 12, 2026</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="notes-row">
-      <div class="note" style="grid-column:1 / -1;box-shadow:inset 3px 0 0 var(--green);">
-        <h4>🏆 Best Paper Award</h4>
-        <p>The top contributed paper will receive the Best Paper Award, sponsored by NVIDIA.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ABOUT -->
 <section id="about" class="about">
@@ -607,10 +541,10 @@
     <h2 class="section-title">Tentative Schedule</h2>
     <div class="timeline">
       <div class="ev"><span class="time">08:30 – 08:35</span><span class="what">Opening Remarks</span></div>
-      <div class="ev major"><span class="time">08:35 – 09:05</span><span class="what">Oral Session 1<span class="sub">Spotlights 1–4 · 5 min each + 2 min Q&amp;A</span></span></div>
+      <div class="ev major"><span class="time">08:35 – 09:05</span><span class="what">Oral Session 1<span class="sub">5 min talk + 2 min Q&amp;A each<br>08:35 Human Universal Grasping<br>08:42 Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration<br>08:49 Human-to-Robot Transfer via Bridging Representation and Action Space in VLAs<br>08:56 BATCH: Behavior Alignment for Cross-Embodiment Learning from Humans</span></span></div>
       <div class="ev major"><span class="time">09:05 – 09:30</span><span class="what">Invited Talk 1</span></div>
       <div class="ev"><span class="time">09:30 – 09:35</span><span class="what">Break<span class="sub">5 min</span></span></div>
-      <div class="ev major"><span class="time">09:35 – 09:50</span><span class="what">Oral Session 2<span class="sub">Spotlights 5–6 · 5 min each + 2 min Q&amp;A</span></span></div>
+      <div class="ev major"><span class="time">09:35 – 09:50</span><span class="what">Oral Session 2<span class="sub">5 min talk + 2 min Q&amp;A each<br>09:35 RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild<br>09:42 EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming</span></span></div>
       <div class="ev major"><span class="time">09:50 – 10:05</span><span class="what">Sponsor Talk<span class="sub">Tangible</span></span></div>
       <div class="ev major"><span class="time">10:05 – 10:30</span><span class="what">Invited Talk 2</span></div>
       <div class="ev"><span class="time">10:30 – 11:00</span><span class="what">Coffee Break &amp; Poster Session</span></div>
@@ -620,6 +554,56 @@
       <div class="ev major"><span class="time">12:00 – 12:25</span><span class="what">Panel Discussion</span></div>
       <div class="ev"><span class="time">12:25 – 12:30</span><span class="what">Awards &amp; Closing Remarks</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ACCEPTED PAPERS -->
+<section id="papers" class="papers">
+  <div class="wrap">
+    <p class="eyebrow">Papers</p>
+    <h2 class="section-title">Accepted Papers</h2>
+    <div class="note">
+      <h4>🏆 Best Paper Award</h4>
+      <p>The top contributed paper will receive the Best Paper Award, sponsored by NVIDIA.</p>
+    </div>
+
+    <h3>Oral Presentations</h3>
+    <ul class="paper-list">
+      <li><span class="pt">Human Universal Grasping</span><span class="pa">Kevin Yuanbo Wu, Tianxing Zhou, Isaac Tu, Billy Yan, Irmak Guzey, David Fouhey, Dandan Shan, Lerrel Pinto</span></li>
+      <li><span class="pt">Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration</span><span class="pa">Jusuk Lee, Sungha Kim, Yeonsoo Park, Jonguk Cheon, Yoonkyo Jung, Yongjun You, H. Jin Kim, Jia-Bin Huang, Furong Huang, Youngseok Jang, Seungjae Lee</span></li>
+      <li><span class="pt">Human-to-Robot Transfer via Bridging Representation and Action Space in VLAs</span><span class="pa">Junhyeong Park, Wook Jung, Taeyoung Kim, Huiwon Jang, Jinwoo Shin</span></li>
+      <li><span class="pt">BATCH: Behavior Alignment for Cross-Embodiment Learning from Humans</span><span class="pa">Zeyi Liu, Shuran Song</span></li>
+      <li><span class="pt">RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild</span><span class="pa">Wenjing Margaret Mao, Jefferson Ng, Luyang Hu, Daniel Gehrig, Antonio Loquercio</span></li>
+      <li><span class="pt">EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming</span><span class="pa">Yaru Niu, Binghong Chen, Changwei Yao, Shangtao Li, Zhenlong Fang, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Kalie Ching, Po-Ju Chao, Yudong Luo, Peiqi Yu, Heng Zhang, Hao Zhang, Bingqing Chen, et al.</span></li>
+    </ul>
+
+    <h3>Poster Presentations</h3>
+    <ul class="paper-list">
+      <li><span class="pt">DUET: Dual-Robot Understanding via Efficient Teaching</span><span class="pa">Yiqi Zhao, Ruohai Ge, Celina Shiyu Wang, Junjie Ye, Muchen Xu, Minhao Li, Sergey Zakharov, Basile Van Hoorick, Vitor Campagnolo Guizilini, Leonidas Guibas, Gaurav S. Sukhatme, Jyotirmoy V. Deshmukh, Yue Wang</span></li>
+      <li><span class="pt">HumanEgo: Zero-Shot Robot Learning from Minutes of Human Egocentric Videos</span><span class="pa">Zhi Wang, Botao He, Kelin Yu, Seungjae Lee, Ruohan Gao, Furong Huang, Yiannis Aloimonos</span></li>
+      <li><span class="pt">ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware</span><span class="pa">Shuai Zhou, Kaisheng Pang, Wenxuan Song, Wenjie Zhang, Xinhu Zheng, Haoang Li</span></li>
+      <li><span class="pt">Video2Sim2Real: Full-Stack Self-Sufficient Dexterous Skill Acquisition from a Single Human Video</span><span class="pa">Yunhai Han, Jianuo Qiu, Linhao Bai, Ziyu Xiao, Zihang Zeng, Yangcen Liu, Zhaodong Yang, Shalin Jain, Wenrui Ma, Jiaqi Fu, Yuqian Zheng, Manisha Natarajan, Muhammad Zubair Irshad, Kenneth Shaw, Matthew Craig Gombolay, et al.</span></li>
+      <li><span class="pt">X-Reset: Scaling Object-Centric Reinforcement Learning via Cross-Embodiment Resets</span><span class="pa">Prithwish Dan, Chenyang Ma, Wei Zhan</span></li>
+      <li><span class="pt">Generating Robot Hands from Human Demonstrations</span><span class="pa">Sha Yi, Nicklas Hansen, Xueqian Bai, Carmelo Sferrazza, Michael T. Tolley, Xiaolong Wang</span></li>
+      <li><span class="pt">Learning Transferable World-Action Models from Task-Paired Human Videos</span><span class="pa">Jeongeun Park, Taekyung Kim, Dongyoon Han, Sangdoo Yun</span></li>
+      <li><span class="pt">Breaking the Speed-Accuracy Tradeoff in Humanoid Bimanual Teleoperation with Orientation-Only Retargeting</span><span class="pa">Chuizheng Kong, Yunho Cho, Wonsuhk Jung, Idris Wibowo, Parth Kishor Shinde, Sundhar Vinodh Sangeetha, Long Kiu Chung, Zhenyang Chen, Andrew Mattei, Advaith Nidumukkala, Alexander J. Elias, Danfei Xu, Taylor Higgins, Shreyas Kousik</span></li>
+      <li><span class="pt">VioLA: Learning Generalist Humanoid Control Policies from Human Data</span><span class="pa">Mert Albaba, Jens Beißwenger, Anna Manasyan, Daniel Marta, Wieland Brendel, Georg Martius, Michael J. Black, Andreas Krause, Martin Riedmiller</span></li>
+      <li><span class="pt">Grounding Generated Video Plans in Simulation Towards Versatile Dexterous Controllers</span><span class="pa">Tianyue Wu, Boyuan An, Shuqi Zhao, Heyu Guo, Wanli Xing, Yi Ma, Kaifeng Zhang, Ruihai Wu, Masayoshi Tomizuka</span></li>
+      <li><span class="pt">TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning</span><span class="pa">Dayou Li, Hao Wang, Qianqian Yang, Zihao Zhu, Haoquan Fang, Ziyao Zeng, Yan Han, Zihan Wang, Yan Wang, Baoru Huang, Dilin Wang, Kenji Shimada, Yiyue Luo, Manling Li, Teresa Lv, et al.</span></li>
+      <li><span class="pt">Mix and Match: Amplifying Human Demonstrations with Mixed-Embodiment Data</span><span class="pa">Hanzhang Fang, Omar Rayyan, Erdem Biyik, Yuchen Cui</span></li>
+      <li><span class="pt">A Unified Inertial Encoder for Human and Humanoid Motion</span><span class="pa">Yutian Chen, Shibo Zhao, Rocky Duan, Karen Liu, Carmelo Sferrazza, Guanya Shi, Yuheng Qiu, Koushil Sreenath</span></li>
+      <li><span class="pt">Human for Coverage, Robot for Precision: A Dual-Actor Policy for Fine-Grained Manipulation</span><span class="pa">Mingxi Jia, Patton Yin, Haojie Huang, Ivy Xiao He, Xuanru Liu, Gefei Liu, Dian Wang, Stefanie Tellex</span></li>
+      <li><span class="pt">What Matters When Cotraining Robot Manipulation Policies on Everyday Human Videos?</span><span class="pa">Richard Li, Aditya Prakash, Andrew Wen, Saurabh Gupta, Yilun Du, Pulkit Agrawal</span></li>
+      <li><span class="pt">DreamX: Video Diffusion Model is a Universal Latent Action Learner</span><span class="pa">Jisoo Kim, Chaehyun Kim, Junsu Kim, Jiho Park, Seongchan Kim, Eunbeen Hong, Soowon Son, Fu-En Yang, Seungryong Kim</span></li>
+      <li><span class="pt">CARD: Contact-Anchored Retargeting for Dexterous Manipulation</span><span class="pa">Cunxi Dai, Botao He, Francois Robert Hogan, Wei Pan, Rao Fu, Wen-Han Hsieh, Ruoshi Liu, Jitendra Malik, Guanya Shi, Akash Sharma</span></li>
+      <li><span class="pt">EgoHSI3R: Online 4D Hand-Scene Interaction Reconstruction from Egocentric Video</span><span class="pa">Mingzhi Pei, Zhangchen Ye, Ruoqu Chen, Liu Cao, Yao Feng, Mengdi Xu</span></li>
+      <li><span class="pt">EgoLAP: Learning from Egocentric Human Data through Language-Action Reasoning</span><span class="pa">Lihan Zha, Shresth Grover, Tenny Yin, Samuel M Bateman, Aykut Onol, Mengchao Zhang, Allen Z. Ren, Dhruv Shah, Anirudha Majumdar</span></li>
+      <li><span class="pt">Popeye: Hand Pose and Contact Force Estimation from Forearm Surface Imaging for Natural Manipulation Data Collection</span><span class="pa">Vatsal V. Patel, Pulkit Agrawal</span></li>
+      <li><span class="pt">What to Attend, What to Keep: Skill-Conditioned Visuotactile Representation with Progress-Guided Event Memory</span><span class="pa">Amir Hossein Shahidzadeh, Seungjae Lee, Eadom T Dessalene, Shanthosh Raaj Mohanram Mageswari, Soroush Etemad, Furong Huang, Cornelia Fermuller, Yiannis Aloimonos</span></li>
+      <li><span class="pt">Generative Neural Retargeting for Human-to-Robot Dexterous Manipulation</span><span class="pa">Dechen Gao, Yue Yang, Steven Man, Ben Abbatematteo, Nathan Godwin, Pengcheng Wang, Roger Boldu, Zhiyang Dou, Chuan Qin, Sho Nakagome, Eric Whitmire</span></li>
+      <li><span class="pt">Amortizing Force-Aware Retargeting for Scalable Human-to-Robot Data Generation</span><span class="pa">Sohyeon Im, Sangmoon Lee</span></li>
+      <li><span class="pt">Test-Time Motion Steering for Perceptive Humanoid Fall Recovery</span><span class="pa">Osher Azulay, Cheng-Lin Hsieh, Stella X. Yu</span></li>
+    </ul>
   </div>
 </section>
 
